@@ -16,7 +16,8 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>nl.knaw.dans</groupId>
@@ -37,10 +38,10 @@
         <dans-provider-name>dans.knaw.nl</dans-provider-name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <rpm-replace-configuration>true</rpm-replace-configuration>
-        <rpm-release>1</rpm-release>
+        <rpm-release/>
         <java.version>11</java.version>
         <dans-mvn-build-resources.version>4.0.1</dans-mvn-build-resources.version>
-        <main-class /> <!-- To be filled in by child project -->
+        <main-class/> <!-- To be filled in by child project -->
 
         <!-- Plugin versions -->
         <maven-release-plugin.version>3.0.0-M7</maven-release-plugin.version>
@@ -53,6 +54,7 @@
         <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
         <maven-release-plugin.version>3.0.0-M7</maven-release-plugin.version>
         <maven-deploy-plugin.version>3.0.0</maven-deploy-plugin.version>
+        <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
 
         <license-maven-plugin.version>4.2.rc3</license-maven-plugin.version>
         <rpm-maven-plugin.version>2.2.0</rpm-maven-plugin.version>
@@ -489,9 +491,6 @@
                                     <source>
                                         <location>${project.build.directory}/${project.artifactId}-${project.version}.jar</location>
                                     </source>
-                                    <source>
-                                        <location>${project.build.directory}/version/version</location>
-                                    </source>
                                 </sources>
                             </mapping>
                             <!-- Executable contents of ${app.home}/bin -->
@@ -688,6 +687,41 @@
                             <phase>process-sources</phase>
                             <goals>
                                 <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!-- maven-antrun-plugin -->
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>${maven-antrun-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <phase>generate-sources</phase>
+                            <configuration>
+                                <target name="generate-rpm-scripts">
+                                    <java classname="nl.knaw.dans.build.GenerateRpmScripts" failonerror="true">
+                                        <arg value="${project.build.directory}/dans-build-resources/rpm-includes"/>
+                                        <arg value="${project.build.directory}/dans-rpm-scripts"/>
+                                        <arg value="${project.basedir}/src/main/rpm/build-0-prepare.sh"/>
+                                        <arg value="${project.basedir}/src/main/rpm/build-1-install.sh"/>
+                                        <arg value="${project.basedir}/src/main/rpm/build-2-clean.sh"/>
+                                        <arg value="${project.basedir}/src/main/rpm/0-pre-trans.sh"/>
+                                        <arg value="${project.basedir}/src/main/rpm/1-pre-install.sh"/>
+                                        <arg value="${project.basedir}/src/main/rpm/2-post-install.sh"/>
+                                        <arg value="${project.basedir}/src/main/rpm/3-pre-remove.sh"/>
+                                        <arg value="${project.basedir}/src/main/rpm/4-post-remove.sh"/>
+                                        <arg value="${project.basedir}/src/main/rpm/5-post-trans.sh"/>
+                                        <arg value="${project.basedir}/src/main/rpm/6-verify.sh"/>
+                                        <classpath>
+                                            <!-- Somehow using project.build.directory here does not work -->
+                                            <pathelement location="target/dans-build-resources"/>
+                                        </classpath>
+                                    </java>
+                                </target>
+                            </configuration>
+                            <goals>
+                                <goal>run</goal>
                             </goals>
                         </execution>
                     </executions>
