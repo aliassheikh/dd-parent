@@ -51,7 +51,6 @@
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
         <maven-dependency-plugin.version>3.4.0</maven-dependency-plugin.version>
         <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
-        <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
 
         <license-maven-plugin.version>4.2.rc3</license-maven-plugin.version>
         <rpm-maven-plugin.version>2.2.0</rpm-maven-plugin.version>
