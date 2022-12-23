@@ -695,4 +695,19 @@
             <url>https://maven.dans.knaw.nl/snapshots/</url>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <!-- Credentials for server are defined in ~/.m2/settings.xml -->
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <!-- Final slash is important for Nexus ! -->
+            <url>https://maven.dans.knaw.nl/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <!-- Final slash is important for Nexus ! -->
+            <url>https://maven.dans.knaw.nl/releases/</url>
+        </repository>
+    </distributionManagement>
+
 </project>
