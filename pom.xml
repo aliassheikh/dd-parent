@@ -9,7 +9,8 @@
     <packaging>pom</packaging>
 
     <scm>
-        <developerConnection>scm:git:ssh://github.com/DANS-KNAW/dd-parent-build</developerConnection>
+        <!-- N.B. artifactId differs from GitHub repo name! -->
+        <developerConnection>scm:git:ssh://github.com/DANS-KNAW/dd-parent</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
