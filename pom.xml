@@ -3,14 +3,14 @@
 
     <groupId>nl.knaw.dans</groupId>
     <artifactId>dd-parent-build</artifactId>
-    <version>0.5.0</version>
+    <version>0.5.1-SNAPSHOT</version>
     <name>DD Parent POMs Master Build</name>
     <packaging>pom</packaging>
 
     <scm>
         <!-- N.B. artifactId differs from GitHub repo name! -->
         <developerConnection>scm:git:ssh://github.com/DANS-KNAW/dd-parent</developerConnection>
-        <tag>v0.5.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
