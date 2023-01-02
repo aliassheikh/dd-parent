@@ -29,6 +29,10 @@
     <artifactId>dd-parent-service</artifactId>
     <name>DANS Data Station Service Parent POM</name>
     <packaging>pom</packaging>
+    <scm>
+        <developerConnection>scm:git:ssh://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
     <build>
         <plugins>
