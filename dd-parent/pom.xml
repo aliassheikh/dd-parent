@@ -41,7 +41,6 @@
         <rpm-replace-configuration>true</rpm-replace-configuration>
         <rpm-release/>
         <java.version>11</java.version>
-        <dans-mvn-build-resources.version>4.0.1</dans-mvn-build-resources.version>
         <main-class/> <!-- To be filled in by child project -->
 
         <!-- Plugin versions -->
@@ -122,6 +121,7 @@
         <gson-fire.version>1.8.5</gson-fire.version>
         <gson.version>2.9.0</gson.version>
         <swagger-core.version>1.6.5</swagger-core.version>
+        <dans-build-resources-maven-plugin.version>0.1.0</dans-build-resources-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -653,7 +653,7 @@
                <plugin>
                    <groupId>nl.knaw.dans</groupId>
                    <artifactId>dans-build-resources-maven-plugin</artifactId>
-                   <version>0.1.0-SNAPSHOT</version>
+                   <version>${dans-build-resources-maven-plugin.version}</version>
                    <executions>
                        <execution>
                            <goals>

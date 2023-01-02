@@ -56,7 +56,6 @@
             <plugin>
                 <groupId>nl.knaw.dans</groupId>
                 <artifactId>dans-build-resources-maven-plugin</artifactId>
-                <version>0.1.0-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <goals>
