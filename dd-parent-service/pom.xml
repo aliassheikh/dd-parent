@@ -16,7 +16,8 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -45,13 +46,8 @@
                 <artifactId>maven-source-plugin</artifactId>
             </plugin>
             <plugin>
-                <!-- No regular artifact to publish, so skip this one -->
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-            <plugin>
+                <!-- Included so that it is inherited by child projects. This parent POM will not use the scriptlets itself - as it is not an RPM project itself -
+                     but the child projects do need the scripts to create the RPM. By activating it here we avoid having to include it in every child project POM -->
                 <groupId>nl.knaw.dans</groupId>
                 <artifactId>dans-build-resources-maven-plugin</artifactId>
                 <executions>
