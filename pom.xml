@@ -8,6 +8,11 @@
     <name>DD Parent POMs Master Build</name>
     <packaging>pom</packaging>
 
+    <scm>
+        <developerConnection>scm:git:ssh://github.com/DANS-KNAW/dd-parent-build</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <build>
         <plugins>
             <plugin>
