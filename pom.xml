@@ -3,7 +3,7 @@
 
     <groupId>nl.knaw.dans</groupId>
     <artifactId>dd-parent-build</artifactId>
-    <version>0.5.1-SNAPSHOT</version>
+    <version>0.6.0-SNAPSHOT</version>
     <name>DD Parent POMs Master Build</name>
     <packaging>pom</packaging>
 
