@@ -52,13 +52,14 @@
         <maven-dependency-plugin.version>3.4.0</maven-dependency-plugin.version>
         <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
         <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
-        <maven-release-plugin.version>3.0.0-M7</maven-release-plugin.version>
         <maven-deploy-plugin.version>3.0.0</maven-deploy-plugin.version>
         <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
 
         <license-maven-plugin.version>4.2.rc3</license-maven-plugin.version>
         <rpm-maven-plugin.version>2.2.0</rpm-maven-plugin.version>
-        <dans-nexus-maven-plugin.version>0.1.1-SNAPSHOT</dans-nexus-maven-plugin.version>
+        <dans-nexus-maven-plugin.version>0.3.0</dans-nexus-maven-plugin.version>
+        <dans-build-resources-maven-plugin.version>0.4.0</dans-build-resources-maven-plugin.version>
+
 
         <!-- Library versions -->
         <!-- DropWizard managed BEGIN -->
@@ -121,7 +122,6 @@
         <gson-fire.version>1.8.5</gson-fire.version>
         <gson.version>2.9.0</gson.version>
         <swagger-core.version>1.6.5</swagger-core.version>
-        <dans-build-resources-maven-plugin.version>0.1.0</dans-build-resources-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
