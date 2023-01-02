@@ -24,7 +24,7 @@
         <groupId>nl.knaw.dans</groupId>
         <artifactId>dd-parent</artifactId>
         <version>0.1.2-SNAPSHOT</version>
-        <relativePath />
+        <relativePath>../dd-parent</relativePath>
     </parent>
 
     <artifactId>dd-parent-service</artifactId>
