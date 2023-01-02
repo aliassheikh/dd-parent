@@ -16,13 +16,12 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>nl.knaw.dans</groupId>
     <artifactId>dd-parent</artifactId>
-    <version>0.1.2-SNAPSHOT</version>
+    <version>0.1.0</version>
     <name>DANS Data Station Parent POM</name>
     <description>
         Parent POM for DANS Data Station modules
@@ -31,7 +30,7 @@
     <inceptionYear>2022</inceptionYear>
     <scm>
         <developerConnection>scm:git:ssh://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v0.1.0</tag>
     </scm>
 
     <properties>
@@ -39,9 +38,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <rpm-scriptlets-dir>${project.build.directory}/rpm-scriptlets</rpm-scriptlets-dir>
         <rpm-replace-configuration>true</rpm-replace-configuration>
-        <rpm-release/>
+        <rpm-release />
         <java.version>11</java.version>
-        <main-class/> <!-- To be filled in by child project -->
+        <main-class /> <!-- To be filled in by child project -->
 
         <!-- Plugin versions -->
         <maven-release-plugin.version>3.0.0-M7</maven-release-plugin.version>
