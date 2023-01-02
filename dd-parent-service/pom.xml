@@ -48,11 +48,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <!-- Publishes an RPM to YUM repos -->
-                <groupId>nl.knaw.dans</groupId>
-                <artifactId>dans-nexus-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
                 <groupId>nl.knaw.dans</groupId>
                 <artifactId>dans-build-resources-maven-plugin</artifactId>
                 <executions>
