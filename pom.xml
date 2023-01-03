@@ -57,8 +57,8 @@
 
         <license-maven-plugin.version>4.2.rc3</license-maven-plugin.version>
         <rpm-maven-plugin.version>2.2.0</rpm-maven-plugin.version>
-        <dans-nexus-maven-plugin.version>0.3.0</dans-nexus-maven-plugin.version>
-        <dans-build-resources-maven-plugin.version>0.5.0-SNAPSHOT</dans-build-resources-maven-plugin.version>
+        <dans-nexus-maven-plugin.version>0.4.0</dans-nexus-maven-plugin.version>
+        <dans-build-resources-maven-plugin.version>0.5.0</dans-build-resources-maven-plugin.version>
 
 
         <!-- Library versions -->
