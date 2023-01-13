@@ -73,9 +73,9 @@
         <!-- DropWizard managed END -->
 
         <!-- DANS libs -->
-        <dans-java-utils.version>0.4.0</dans-java-utils.version>
-        <dans-dataverse-client-lib.version>0.11.0</dans-dataverse-client-lib.version>
-        <dd-validate-dans-bag-api.version>0.13.0</dd-validate-dans-bag-api.version>
+        <dans-java-utils.version>0.5.0</dans-java-utils.version>
+        <dans-dataverse-client-lib.version>0.12.0</dans-dataverse-client-lib.version>
+        <dd-validate-dans-bag-api.version>0.14.0</dd-validate-dans-bag-api.version>
 
         <!-- Database -->
         <postgresql.version>42.4.3</postgresql.version>
