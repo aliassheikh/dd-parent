@@ -84,7 +84,7 @@
 
         <!-- Formats -->
         <bagit.version>5.4.0</bagit.version>
-        <zip4j.version>2.11.2</zip4j.version>
+        <zip4j.version>2.11.3</zip4j.version>
         <jgit.version>5.7.0.202003110725-r</jgit.version>
         <tika.version>1.24.1</tika.version>
         <ocfl-java-core.version>1.4.4</ocfl-java-core.version>
