@@ -16,7 +16,8 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>nl.knaw.dans</groupId>
@@ -38,9 +39,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <rpm-scriptlets-dir>${project.build.directory}/rpm-scriptlets</rpm-scriptlets-dir>
         <rpm-replace-configuration>true</rpm-replace-configuration>
-        <rpm-release />
+        <rpm-release/>
         <java.version>11</java.version>
-        <main-class /> <!-- To be filled in by child project -->
+        <main-class/> <!-- To be filled in by child project -->
 
         <!-- Plugin versions -->
         <maven-release-plugin.version>3.0.0-M7</maven-release-plugin.version>
@@ -52,6 +53,7 @@
         <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
         <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
         <maven-deploy-plugin.version>3.0.0</maven-deploy-plugin.version>
+        <maven-lombok-plugin.version>1.18.20.0</maven-lombok-plugin.version>
 
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <license-maven-plugin.version>4.2.rc3</license-maven-plugin.version>
@@ -74,8 +76,8 @@
 
         <!-- DANS libs -->
         <dans-java-utils.version>0.5.0</dans-java-utils.version>
-        <dans-dataverse-client-lib.version>0.14.0</dans-dataverse-client-lib.version>
-        <dd-validate-dans-bag-api.version>0.15.0</dd-validate-dans-bag-api.version>
+        <dans-dataverse-client-lib.version>0.15.0</dans-dataverse-client-lib.version>
+        <dd-validate-dans-bag-api.version>0.17.0</dd-validate-dans-bag-api.version>
 
         <!-- Database -->
         <postgresql.version>42.4.3</postgresql.version>
@@ -736,6 +738,12 @@
                     <configuration>
                         <mainClass>${main-class}</mainClass>
                     </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok-maven-plugin</artifactId>
+                    <version>${maven-lombok-plugin.version}</version>
                 </plugin>
 
             </plugins>
