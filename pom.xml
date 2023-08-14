@@ -16,12 +16,13 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>nl.knaw.dans</groupId>
     <artifactId>dd-parent</artifactId>
-    <version>0.20.1-SNAPSHOT</version>
+    <version>0.21.0-SNAPSHOT</version>
     <name>DANS Data Station Parent POM</name>
     <description>
         Parent POM for DANS Data Station modules
@@ -38,9 +39,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <rpm-scriptlets-dir>${project.build.directory}/rpm-scriptlets</rpm-scriptlets-dir>
         <rpm-replace-configuration>true</rpm-replace-configuration>
-        <rpm-release />
+        <rpm-release/>
         <java.version>11</java.version>
-        <main-class /> <!-- To be filled in by child project -->
+        <main-class/> <!-- To be filled in by child project -->
 
         <!-- Plugin versions -->
         <maven-release-plugin.version>3.0.0-M7</maven-release-plugin.version>
@@ -78,6 +79,10 @@
         <!-- DANS libs -->
         <dans-java-utils.version>0.5.0</dans-java-utils.version>
         <dans-dataverse-client-lib.version>0.20.0</dans-dataverse-client-lib.version>
+
+        <!-- DANS APIs -->
+        <dd-vault-catalog-api.version>0.1.0</dd-vault-catalog-api.version>
+        <dd-validate-dans-bag-api.version>0.2.0</dd-validate-dans-bag-api.version>
 
         <!-- Database -->
         <postgresql.version>42.4.3</postgresql.version>
@@ -378,7 +383,7 @@
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
-                        <!-- By default project.build.sourceEncoding is not used by the compiler plug-in and
+                        <!-- By default project.build.sourceEncoding is not used by the compiler plug-in, and
                              it defaults to ASCII, which messed up some unit tests that specifically used
                              files with Greek letters in it. -->
                         <encoding>${project.build.sourceEncoding}</encoding>
@@ -386,6 +391,24 @@
                             <exclude>**/package.html</exclude>
                             <exclude>**/overview.html</exclude>
                         </excludes>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.mapstruct</groupId>
+                                <artifactId>mapstruct-processor</artifactId>
+                                <version>${mapstruct.version}</version>
+                            </path>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${lombok.version}</version>
+                            </path>
+                            <dependency>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok-mapstruct-binding</artifactId>
+                                <version>0.2.0</version>
+                            </dependency>
+                            <!-- other annotation processors -->
+                        </annotationProcessorPaths>
                     </configuration>
                 </plugin>
                 <!-- maven-source-plugin -->
@@ -772,14 +795,10 @@
                     <artifactId>openapi-generator-maven-plugin</artifactId>
                     <version>${openapi-generator-maven-plugin.version}</version>
                     <configuration>
-                        <inputSpec /> <!-- override in child pom -->
                         <generateModelTests>false</generateModelTests>
                         <generateApiTests>false</generateApiTests>
                         <modelNameSuffix>Dto</modelNameSuffix>
                         <configOptions>
-                            <apiPackage />  <!-- override in child pom -->
-                            <modelPackage />  <!-- override in child pom -->
-                            <invokerPackage />  <!-- override in child pom -->
                             <sourceFolder>src/gen/java/main</sourceFolder>
                             <dateLibrary>java8</dateLibrary>
                             <delegatePattern>true</delegatePattern>
