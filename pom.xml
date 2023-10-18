@@ -78,7 +78,7 @@
         <!-- DropWizard managed END -->
 
         <!-- DANS libs -->
-        <dans-java-utils.version>0.6.0</dans-java-utils.version>
+        <dans-java-utils.version>0.7.0</dans-java-utils.version>
         <dans-dataverse-client-lib.version>0.22.0</dans-dataverse-client-lib.version>
 
         <!-- DANS APIs -->
