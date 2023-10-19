@@ -107,7 +107,7 @@
         <commons-dbcp2.version>2.7.0</commons-dbcp2.version>
         <commons-compress.version>1.21</commons-compress.version>
         <commons-fileupload.version>1.5</commons-fileupload.version>
-        <commons-configuration2.version>2.8.0</commons-configuration2.version>
+        <commons-configuration2.version>2.9.0</commons-configuration2.version>
 
         <!-- XML -->
         <jaxb-api.version>2.3.1</jaxb-api.version>
