@@ -94,7 +94,7 @@
         <bagit.version>5.4.0</bagit.version>
         <zip4j.version>2.11.3</zip4j.version>
         <jgit.version>6.6.1.202309021850-r</jgit.version>
-        <tika.version>1.24.1</tika.version>
+        <tika.version>1.28.3</tika.version>
         <ocfl-java-core.version>1.4.4</ocfl-java-core.version>
 
         <!-- Apache Commons -->
