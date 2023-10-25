@@ -21,7 +21,7 @@
 
     <groupId>nl.knaw.dans</groupId>
     <artifactId>dd-parent</artifactId>
-    <version>0.21.1-SNAPSHOT</version>
+    <version>0.24.0-SNAPSHOT</version>
     <name>DANS Data Station Parent POM</name>
     <description>
         Parent POM for DANS Data Station modules
@@ -65,23 +65,25 @@
 
         <!-- Library versions -->
         <!-- DropWizard managed BEGIN -->
-        <dropwizard.version>2.1.5</dropwizard.version>
+        <dropwizard.version>3.0.2</dropwizard.version>
 
         <!--
         N.B. the following versions must be kept the same as the versions imported by DropWizard. These variables are used
         to import related libraries that are *not* imported by DropWizard. The variable names in dropwizard-dependencies.pom
         are the same, but are not visible here, so they cannot be used directly.
         -->
-        <httpclient.version>4.5.14</httpclient.version>
+        <httpclient5.version>5.2.1</httpclient5.version>
+        <httpcore5.version>5.2.3</httpcore5.version>
+        <httpmime.version>4.5.14</httpmime.version>
         <!-- DropWizard managed END -->
 
         <!-- DANS libs -->
-        <dans-java-utils.version>0.5.0</dans-java-utils.version>
-        <dans-dataverse-client-lib.version>0.20.0</dans-dataverse-client-lib.version>
+        <dans-java-utils.version>0.7.0</dans-java-utils.version>
+        <dans-dataverse-client-lib.version>0.22.0</dans-dataverse-client-lib.version>
 
         <!-- DANS APIs -->
         <dd-vault-catalog-api.version>0.1.0</dd-vault-catalog-api.version>
-        <dd-validate-dans-bag-api.version>0.2.0</dd-validate-dans-bag-api.version>
+        <dd-validate-dans-bag-api.version>0.3.0</dd-validate-dans-bag-api.version>
 
         <!-- Database -->
         <postgresql.version>42.4.3</postgresql.version>
@@ -91,7 +93,7 @@
         <!-- Formats -->
         <bagit.version>5.4.0</bagit.version>
         <zip4j.version>2.11.3</zip4j.version>
-        <jgit.version>5.7.0.202003110725-r</jgit.version>
+        <jgit.version>6.6.1.202309021850-r</jgit.version>
         <tika.version>1.28.3</tika.version>
         <ocfl-java-core.version>1.4.4</ocfl-java-core.version>
 
@@ -121,6 +123,8 @@
         <solr-solrj.version>9.0.0</solr-solrj.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <lombok.version>1.18.24</lombok.version>
+        <jsr305.version>3.0.2</jsr305.version>
+        <joda-time.version>2.12.5</joda-time.version>
 
         <!-- Open API -->
         <okhttp.version>4.9.3</okhttp.version>
@@ -145,9 +149,23 @@
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpmime</artifactId>
-                <version>${httpclient.version}</version>
+                 <version>${httpmime.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.apache.httpcomponents.client5</groupId>
+                <artifactId>httpclient5</artifactId>
+                <version>${httpclient5.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.core5</groupId>
+                <artifactId>httpcore5</artifactId>
+                <version>${httpcore5.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>jsr305</artifactId>
+                <version>${jsr305.version}</version>
+            </dependency>
             <!-- DANS libs -->
             <dependency>
                 <groupId>nl.knaw.dans</groupId>
@@ -321,6 +339,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
             </dependency>
 
 
