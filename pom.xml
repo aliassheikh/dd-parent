@@ -39,7 +39,7 @@
         <rpm-scriptlets-dir>${project.build.directory}/rpm-scriptlets</rpm-scriptlets-dir>
         <rpm-replace-configuration>true</rpm-replace-configuration>
         <rpm-release />
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <main-class /> <!-- To be filled in by child project -->
 
         <!-- Plugin versions -->
@@ -475,10 +475,8 @@
                         <additionalJOptions>
                             <additionalJOption>-J-Xmx1g</additionalJOption>
                             <additionalJOption>-J-Djava.awt.headless=true</additionalJOption>
-                            <!--
-                            Otherwise JavaDoc will try to group the html files per module and produce dead links starting with 'undefined'.
-                            -->
-                            <additionalJOption>--no-module-directories</additionalJOption>
+                            <!-- Prevent javadoc from requiring a doc comment for every getter and setter -->
+                            <additionalJOption>-Xdoclint:-missing</additionalJOption>
                         </additionalJOptions>
                     </configuration>
                 </plugin>
