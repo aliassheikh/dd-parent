@@ -872,12 +872,12 @@
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <!-- Final slash is important for Nexus ! -->
-            <url>https://maven.dans.knaw.nl/snapshots/</url>
+            <url>https://develop31.dans.knaw.nl/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>nexus-releases</id>
             <!-- Final slash is important for Nexus ! -->
-            <url>https://maven.dans.knaw.nl/releases/</url>
+            <url>https://develop31.dans.knaw.nl/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
