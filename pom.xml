@@ -749,8 +749,8 @@
                     <configuration>
                         <nexusUserName>${env.NEXUS_USER}</nexusUserName>
                         <nexusPassword>${env.NEXUS_PASSWORD}</nexusPassword>
-                        <rpmRepositoryUrl>https://develop31.dans.knaw.nl/repository/rpm-releases</rpmRepositoryUrl>
-                        <snapshotRpmRepositoryUrl>https://develop31.dans.knaw.nl/repository/rpm-snapshots</snapshotRpmRepositoryUrl>
+                        <rpmRepositoryUrl>http://nexus.dans.knaw.nl/repository/rpm-releases</rpmRepositoryUrl>
+                        <snapshotRpmRepositoryUrl>http://nexus.dans.knaw.nl/repository/rpm-snapshots</snapshotRpmRepositoryUrl>
                     </configuration>
                     <executions>
                         <execution>
@@ -872,12 +872,12 @@
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <!-- Final slash is important for Nexus ! -->
-            <url>https://develop31.dans.knaw.nl/repository/maven-snapshots/</url>
+            <url>https://maven.dans.knaw.nl/snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>nexus-releases</id>
             <!-- Final slash is important for Nexus ! -->
-            <url>https://develop31.dans.knaw.nl/repository/maven-releases/</url>
+            <url>https://maven.dans.knaw.nl/releases/</url>
         </repository>
     </distributionManagement>
 
