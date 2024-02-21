@@ -84,7 +84,7 @@
         <dd-validate-dans-bag-api.version>0.3.0</dd-validate-dans-bag-api.version>
 
         <!-- Database -->
-        <postgresql.version>42.4.3</postgresql.version>
+        <postgresql.version>42.7.2</postgresql.version>
         <mysql-connector-java.version>8.0.30</mysql-connector-java.version>
         <hsqldb.version>2.7.1</hsqldb.version>
 
