@@ -727,7 +727,7 @@
                             <exclude>*.pyc</exclude>
                             <exclude>docs/</exclude>
                             <exclude>**/pom.xml.versionsBackup</exclude>
-                            <exclude>.venv-mkdocs/</exclude>
+                            <exclude>.venv*/</exclude>
                         </excludes>
                     </configuration>
                     <executions>
