@@ -21,7 +21,7 @@
 
     <groupId>nl.knaw.dans</groupId>
     <artifactId>dd-parent</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.2.0-SNAPSHOT</version>
     <name>DANS Data Station Parent POM</name>
     <description>
         Parent POM for DANS Data Station modules
@@ -65,16 +65,7 @@
 
 
         <!-- Library versions -->
-        <!-- DropWizard managed BEGIN -->
         <dropwizard.version>3.0.5</dropwizard.version>
-
-        <!--
-        N.B. the following versions must be kept the same as the versions imported by DropWizard. These variables are used
-        to import related libraries that are *not* imported by DropWizard. The variable names in dropwizard-dependencies.pom
-        are the same, but are not visible here, so they cannot be used directly.
-        -->
-        <httpclient5.version>5.2.4</httpclient5.version>
-        <!-- DropWizard managed END -->
 
         <!-- DANS libs -->
         <dans-java-utils.version>0.9.0</dans-java-utils.version>
@@ -146,11 +137,6 @@
                 <version>${dropwizard.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents.client5</groupId>
-                <artifactId>httpclient5</artifactId>
-                <version>${httpclient5.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.google.code.findbugs</groupId>
