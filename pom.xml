@@ -762,8 +762,8 @@
                     <configuration>
                         <nexusUserName>${env.NEXUS_USER}</nexusUserName>
                         <nexusPassword>${env.NEXUS_PASSWORD}</nexusPassword>
-                        <rpmRepositoryUrl>http://nexus.dans.knaw.nl/repository/rpm-releases</rpmRepositoryUrl>
-                        <snapshotRpmRepositoryUrl>http://nexus.dans.knaw.nl/repository/rpm-snapshots</snapshotRpmRepositoryUrl>
+                        <rpmRepositoryUrl>https://nexus.dans.knaw.nl/repository/rpm-releases</rpmRepositoryUrl>
+                        <snapshotRpmRepositoryUrl>https://nexus.dans.knaw.nl/repository/rpm-snapshots</snapshotRpmRepositoryUrl>
                     </configuration>
                     <executions>
                         <execution>
