@@ -21,7 +21,7 @@
 
     <groupId>nl.knaw.dans</groupId>
     <artifactId>dd-parent</artifactId>
-    <version>1.3.1</version>
+    <version>1.3.2-SNAPSHOT</version>
     <name>DANS Data Station Parent POM</name>
     <description>
         Parent POM for DANS Data Station modules
@@ -30,7 +30,7 @@
     <inceptionYear>2022</inceptionYear>
     <scm>
         <developerConnection>scm:git:ssh://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
-        <tag>v1.3.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
