@@ -70,7 +70,7 @@
         <!-- DANS libs -->
         <dans-java-utils.version>0.12.0</dans-java-utils.version>
         <dans-validation-lib.version>0.3.0</dans-validation-lib.version>
-        <dans-dataverse-client-lib.version>0.27.0</dans-dataverse-client-lib.version>
+        <dans-dataverse-client-lib.version>0.29.1</dans-dataverse-client-lib.version>
         <dans-layer-store-lib.version>0.2.0</dans-layer-store-lib.version>
         <dans-ocfl-java-extensions-lib.version>0.2.0</dans-ocfl-java-extensions-lib.version>
         <dans-schema-lib.version>0.13.0</dans-schema-lib.version>
