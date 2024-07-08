@@ -80,6 +80,7 @@
         <dd-vault-catalog-api.version>0.7.0</dd-vault-catalog-api.version>
         <dd-validate-dans-bag-api.version>0.5.0</dd-validate-dans-bag-api.version>
         <dd-data-vault-api.version>0.3.0</dd-data-vault-api.version>
+        <dd-gmh-api.version>0.1.1</dd-gmh-api.version>
 
         <!-- Database -->
         <postgresql.version>42.7.2</postgresql.version>
