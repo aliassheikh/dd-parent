@@ -103,7 +103,7 @@
         <commons-dbcp2.version>2.11.0</commons-dbcp2.version>
         <commons-compress.version>1.26.0</commons-compress.version>
         <commons-fileupload.version>1.5</commons-fileupload.version>
-        <commons-configuration2.version>2.9.0</commons-configuration2.version>
+        <commons-configuration2.version>2.10.1</commons-configuration2.version>
 
         <!-- XML -->
         <!-- We cannot go to the latest version, until we go to jakarta -->
