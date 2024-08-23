@@ -21,7 +21,7 @@
 
     <groupId>nl.knaw.dans</groupId>
     <artifactId>dd-parent</artifactId>
-    <version>1.8.1-SNAPSHOT</version>
+    <version>1.9.0-SNAPSHOT</version>
     <name>DANS Data Station Parent POM</name>
     <description>
         Parent POM for DANS Data Station modules
@@ -71,7 +71,7 @@
         <dans-java-utils.version>0.19.0</dans-java-utils.version>
         <dans-validation-lib.version>0.3.0</dans-validation-lib.version>
         <dans-converter-lib.version>0.2.0</dans-converter-lib.version>
-        <dans-dataverse-client-lib.version>0.30.0</dans-dataverse-client-lib.version>
+        <dans-dataverse-client-lib.version>0.32.0</dans-dataverse-client-lib.version>
         <dans-layer-store-lib.version>0.4.0</dans-layer-store-lib.version>
         <dans-ocfl-java-extensions-lib.version>0.3.0</dans-ocfl-java-extensions-lib.version>
         <dans-schema-lib.version>0.15.0</dans-schema-lib.version>
@@ -124,7 +124,8 @@
         <lombok.version>1.18.30</lombok.version>
         <jsr305.version>3.0.2</jsr305.version>
         <joda-time.version>2.12.7</joda-time.version>
-        <picocli.version>4.7.5</picocli.version>
+        <picocli.version>4.7.6</picocli.version>
+        <javax.activation.version>1.1.1</javax.activation.version>
 
         <!-- Code generation -->
         <okhttp.version>4.12.0</okhttp.version>
@@ -374,6 +375,11 @@
                 <groupId>info.picocli</groupId>
                 <artifactId>picocli</artifactId>
                 <version>${picocli.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>${javax.activation.version}</version>
             </dependency>
 
 
