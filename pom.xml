@@ -43,95 +43,115 @@
         <main-class /> <!-- To be filled in by child project -->
 
         <!-- Plugin versions -->
-        <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
-        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
-        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
-        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
-        <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
-        <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
-        <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
-        <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
-        <maven-lombok-plugin.version>1.18.20.0</maven-lombok-plugin.version>
-        <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
-        <openapi-generator-maven-plugin.version>7.3.0</openapi-generator-maven-plugin.version>
+        <maven-release-plugin.version>3.1.1</maven-release-plugin.version>
+        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
+        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+        <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+        <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
+        <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
+        <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
+        <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
+        <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
+        <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
+        <openapi-generator-maven-plugin.version>7.15.0</openapi-generator-maven-plugin.version>
         <jaxb2-maven-plugin.version>2.5.0</jaxb2-maven-plugin.version><!-- Generates javax.xml classes. When upgrading we need to go wholesale to jakarta.xml.bind-api -->
 
-        <exec-maven-plugin.version>3.2.0</exec-maven-plugin.version>
-        <license-maven-plugin.version>4.3</license-maven-plugin.version>
+        <exec-maven-plugin.version>3.5.1</exec-maven-plugin.version>
+        <license-maven-plugin.version>4.6</license-maven-plugin.version>
         <rpm-maven-plugin.version>2.3.0</rpm-maven-plugin.version>
         <dans-nexus-maven-plugin.version>0.4.0</dans-nexus-maven-plugin.version>
-        <dans-build-resources-maven-plugin.version>0.6.0</dans-build-resources-maven-plugin.version>
+        <dans-build-resources-maven-plugin.version>0.7.0</dans-build-resources-maven-plugin.version>
 
 
         <!-- Library versions -->
-        <dropwizard.version>3.0.5</dropwizard.version>
+        <dropwizard.version>3.0.16</dropwizard.version>
+        <dropwizard-testing.version>3.0.16</dropwizard-testing.version>
 
         <!-- DANS libs -->
-        <dans-java-utils.version>0.19.0</dans-java-utils.version>
-        <dans-validation-lib.version>0.3.0</dans-validation-lib.version>
+        <dans-java-utils.version>2.3.0</dans-java-utils.version>
+        <dans-bagit-lib.version>1.2.0</dans-bagit-lib.version>
+        <dans-validation-lib.version>1.1.0</dans-validation-lib.version>
         <dans-converter-lib.version>0.2.0</dans-converter-lib.version>
-        <dans-dataverse-client-lib.version>0.32.0</dans-dataverse-client-lib.version>
-        <dans-layer-store-lib.version>0.4.0</dans-layer-store-lib.version>
-        <dans-ocfl-java-extensions-lib.version>0.3.0</dans-ocfl-java-extensions-lib.version>
-        <dans-schema-lib.version>0.15.0</dans-schema-lib.version>
+        <dans-dataverse-client-lib.version>1.4.0</dans-dataverse-client-lib.version>
+        <dans-layer-store-lib.version>0.12.0</dans-layer-store-lib.version>
+        <dans-ocfl-java-extensions-lib.version>0.11.0</dans-ocfl-java-extensions-lib.version>
+        <dans-schema-lib.version>1.0.0</dans-schema-lib.version>
+        <dd-dans-sword2-examples.version>1.0.4</dd-dans-sword2-examples.version>
 
         <!-- DANS APIs -->
-        <dd-vault-catalog-api.version>0.7.0</dd-vault-catalog-api.version>
-        <dd-validate-dans-bag-api.version>0.5.0</dd-validate-dans-bag-api.version>
-        <dd-data-vault-api.version>0.3.0</dd-data-vault-api.version>
+        <dd-vault-catalog-api.version>0.9.0</dd-vault-catalog-api.version>
+        <dd-validate-dans-bag-api.version>1.0.0</dd-validate-dans-bag-api.version>
+        <dd-data-vault-api.version>0.7.0</dd-data-vault-api.version>
         <dd-gmh-api.version>0.1.1</dd-gmh-api.version>
+        <dd-confirm-archiving-api.version>0.1.0</dd-confirm-archiving-api.version>
+        <dd-dataverse-ingest-api.version>0.3.0</dd-dataverse-ingest-api.version>
 
         <!-- Database -->
-        <postgresql.version>42.7.2</postgresql.version>
-        <mysql-connector-java.version>8.0.30</mysql-connector-java.version>
-        <hsqldb.version>2.7.2</hsqldb.version>
+        <postgresql.version>42.7.8</postgresql.version>
+        <mysql-connector-java.version>8.0.33</mysql-connector-java.version>
+        <hsqldb.version>2.7.4</hsqldb.version>
 
         <!-- Formats -->
-        <bagit.version>5.4.0</bagit.version>
+        <bagit.version>5.4.0</bagit.version><!-- not yet in https://mvnrepository.com/artifact/nl.knaw.dans/bagit -->
         <zip4j.version>2.11.5</zip4j.version>
-        <jgit.version>6.6.1.202309021850-r</jgit.version>
-        <tika.version>2.9.1</tika.version>
-        <ocfl-java.version>2.0.0</ocfl-java.version>
-        <apache-jena-libs.version>4.10.0</apache-jena-libs.version>
+        <jgit.version>7.3.0.202506031305-r</jgit.version>
+        <tika.version>2.9.4</tika.version>
+        <ocfl-java.version>2.2.2</ocfl-java.version>
+        <apache-jena-libs.version>5.5.0</apache-jena-libs.version>
 
         <!-- Apache Commons -->
-        <commons-io.version>2.15.1</commons-io.version>
-        <commons-codec.version>1.16.1</commons-codec.version>
+        <commons-io.version>2.20.0</commons-io.version>
+        <commons-codec.version>1.19.0</commons-codec.version>
         <commons-lang.version>2.6</commons-lang.version>
+        <commons-lang3.version>3.19.0</commons-lang3.version>
+        <commons-collections4.version>4.5.0</commons-collections4.version>
+        <commons-exec.version>1.5.0</commons-exec.version>
         <commons-configuration.version>1.10</commons-configuration.version>
-        <commons-csv.version>1.10.0</commons-csv.version>
-        <commons-daemon.version>1.3.4</commons-daemon.version>
-        <commons-dbcp2.version>2.11.0</commons-dbcp2.version>
-        <commons-compress.version>1.26.0</commons-compress.version>
-        <commons-fileupload.version>1.5</commons-fileupload.version>
-        <commons-configuration2.version>2.10.1</commons-configuration2.version>
+        <commons-configuration2.version>2.12.0</commons-configuration2.version>
+        <commons-csv.version>1.14.1</commons-csv.version>
+        <commons-daemon.version>1.4.1</commons-daemon.version>
+        <commons-dbcp2.version>2.13.0</commons-dbcp2.version>
+        <commons-compress.version>1.28.0</commons-compress.version>
+        <commons-fileupload.version>1.6.0</commons-fileupload.version>
 
         <!-- XML -->
         <!-- We cannot go to the latest version, until we go to jakarta -->
         <javax.xml.jaxb-api.version>2.3.1</javax.xml.jaxb-api.version>
         <jaxb-runtime.version>2.3.1</jaxb-runtime.version>
+        <jaxb-api.version>2.3.1</jaxb-api.version>
+        <jaxb-impl.version>2.3.3</jaxb-impl.version>
         <jersey-media-jaxb.version>2.35</jersey-media-jaxb.version>
 
         <!-- Misc utilities -->
-        <quartz.version>2.3.2</quartz.version>
-        <velocity-engine-core.version>2.3</velocity-engine-core.version>
+        <quartz.version>2.5.0</quartz.version>
+        <velocity-engine-core.version>2.4.1</velocity-engine-core.version>
         <json-path.version>2.9.0</json-path.version>
-        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <jersey-media-json-jackson.version>2.47</jersey-media-json-jackson.version>
+        <commons-beanutils.version>1.11.0</commons-beanutils.version>
         <jbcrypt.version>0.4</jbcrypt.version>
-        <solr-solrj.version>9.5.0</solr-solrj.version>
-        <mapstruct.version>1.5.5.Final</mapstruct.version>
-        <lombok.version>1.18.30</lombok.version>
+        <solr-solrj.version>9.9.0</solr-solrj.version>
+        <mapstruct.version>1.6.0</mapstruct.version>
+        <lombok.version>1.18.42</lombok.version>
         <jsr305.version>3.0.2</jsr305.version>
-        <joda-time.version>2.12.7</joda-time.version>
-        <picocli.version>4.7.6</picocli.version>
+        <joda-time.version>2.14.0</joda-time.version>
+        <picocli.version>4.7.7</picocli.version>
         <javax.activation.version>1.1.1</javax.activation.version>
+        <apiguardian-api.version>1.1.2</apiguardian-api.version>
+        <memoryfilesystem.version>2.8.1</memoryfilesystem.version>
+        <jtar.version>2.3</jtar.version>
+        <mockito-inline.version>5.2.0</mockito-inline.version>
 
         <!-- Code generation -->
         <okhttp.version>4.12.0</okhttp.version>
         <gson-fire.version>1.9.0</gson-fire.version>
-        <gson.version>2.10.1</gson.version>
-        <swagger-core.version>1.6.13</swagger-core.version>
+        <gson.version>2.13.2</gson.version>
+        <swagger-core.version>1.6.16</swagger-core.version>
+
+        <httpclient.version>4.5.14</httpclient.version>
+        <httpcore5.version>5.3.6</httpcore5.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <plexus-archiver.version>3.7.0</plexus-archiver.version>
     </properties>
 
     <dependencyManagement>
@@ -148,6 +168,12 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
+                <groupId>io.dropwizard</groupId>
+                <artifactId>dropwizard-testing</artifactId>
+                <version>${dropwizard-testing.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
                 <groupId>com.google.code.findbugs</groupId>
                 <artifactId>jsr305</artifactId>
                 <version>${jsr305.version}</version>
@@ -157,6 +183,11 @@
                 <groupId>nl.knaw.dans</groupId>
                 <artifactId>dans-java-utils</artifactId>
                 <version>${dans-java-utils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>nl.knaw.dans</groupId>
+                <artifactId>dans-bagit-lib</artifactId>
+                <version>${dans-bagit-lib.version}</version>
             </dependency>
             <dependency>
                 <groupId>nl.knaw.dans</groupId>
@@ -183,7 +214,21 @@
                 <artifactId>dans-ocfl-java-extensions-lib</artifactId>
                 <version>${dans-ocfl-java-extensions-lib.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>nl.knaw.dans</groupId>
+                <artifactId>dd-dataverse-ingest-api</artifactId>
+                <version>${dd-dataverse-ingest-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>nl.knaw.dans</groupId>
+                <artifactId>dd-dans-sword2-examples</artifactId>
+                <version>${dd-dans-sword2-examples.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>nl.knaw.dans</groupId>
+                <artifactId>dans-layer-store-lib</artifactId>
+                <version>${dans-layer-store-lib.version}</version>
+            </dependency>
 
             <!-- Database -->
             <dependency>
@@ -265,6 +310,11 @@
                 <version>${commons-lang.version}</version>
             </dependency>
             <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-csv</artifactId>
                 <version>${commons-csv.version}</version>
@@ -294,7 +344,11 @@
                 <artifactId>commons-configuration2</artifactId>
                 <version>${commons-configuration2.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-exec</artifactId>
+                <version>${commons-exec.version}</version>
+            </dependency>
             <!-- XML -->
             <dependency>
                 <groupId>javax.xml.bind</groupId>
@@ -381,7 +435,33 @@
                 <artifactId>activation</artifactId>
                 <version>${javax.activation.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.apiguardian</groupId>
+                <artifactId>apiguardian-api</artifactId>
+                <version>${apiguardian-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.marschall</groupId>
+                <artifactId>memoryfilesystem</artifactId>
+                <version>${memoryfilesystem.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-inline</artifactId>
+                <version>${mockito-inline.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.kamranzafar</groupId>
+                <artifactId>jtar</artifactId>
+                <version>${jtar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
 
             <!-- Open API -->
             <dependency>
@@ -409,6 +489,18 @@
                 <artifactId>swagger-annotations</artifactId>
                 <version>${swagger-core.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${jaxb-impl.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -463,7 +555,7 @@
                             <dependency>
                                 <groupId>org.projectlombok</groupId>
                                 <artifactId>lombok-mapstruct-binding</artifactId>
-                                <version>0.2.0</version>
+                                <version>${lombok-mapstruct-binding.version}</version>
                             </dependency>
                             <!-- other annotation processors -->
                         </annotationProcessorPaths>
@@ -560,7 +652,7 @@
                         <dependency>
                             <groupId>org.codehaus.plexus</groupId>
                             <artifactId>plexus-archiver</artifactId>
-                            <version>3.7.0</version>
+                            <version>${plexus-archiver.version}</version>
                         </dependency>
                     </dependencies>
                     <configuration>
@@ -822,7 +914,7 @@
                 <plugin>
                     <groupId>org.projectlombok</groupId>
                     <artifactId>lombok-maven-plugin</artifactId>
-                    <version>${maven-lombok-plugin.version}</version>
+                    <version>${lombok-maven-plugin.version}</version>
                 </plugin>
 
                 <plugin>
